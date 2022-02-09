@@ -1,0 +1,151 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "montseratt", sans-serif;
+}
+
+.App {
+	background-image: url("./assets/cold-bg.jpg");
+	background-size: cover;
+	background-position: center;
+	transition: 0.4s ease-out;
+	object-fit: cover;
+	width: 100%;
+}
+
+.App.warm {
+	background-image: url("./assets/warm-bg.jpg");
+}
+
+main {
+	min-height: 100vh;
+	padding: 25px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.search-box {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 8vh 0;
+}
+
+.search-box .search-bar {
+	display: block;
+	width: 30%;
+	padding: 15px;
+	appearance: none;
+	background: none;
+	border: none;
+	outline: none;
+	background-color: rgba(255, 255, 255, 0.8);
+	border-radius: 0 0 16px 16px;
+	box-shadow: 0 5px rgba(0, 0, 0, 0.2);
+	color: #313131;
+	font-size: 20px;
+	transition: 0.4s ease;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.search-box .search-bar:focus {
+	background-color: rgba(255, 255, 255, 1);
+}
+
+.wrapper {
+	width: 30%;
+	border: 1px solid gray;
+	border-radius: 20px;
+	background-color: rgba(255, 255, 255, 0.8);
+	box-shadow: 3px 3px rgba(0, 0, 0, 0.6);
+}
+
+.wrapper:hover {
+	transform: scale(1.1);
+	transition: all 0.4s ease-in-out;
+}
+
+.location-box .location {
+	color: rgba(0, 0, 0, 0.815);
+	font-size: 2rem;
+	font-weight: 700;
+	text-align: center;
+	text-shadow: 3px 3px rgba(199, 189, 189, 0.3);
+	padding: 1rem;
+	position: relative;
+}
+
+.location span {
+	font-size: 1.3rem;
+	background-color: orange;
+	color: white;
+	border-radius: 20%;
+	position: absolute;
+	margin-left: 5px;
+}
+
+.location-box .date {
+	color: rgb(97, 96, 96);
+	font-size: 1.2rem;
+	font-weight: 500;
+	font-style: italic;
+	text-align: center;
+}
+
+.weather-box {
+	text-align: center;
+}
+
+.weather-box .temp {
+	position: relative;
+	display: inline-block;
+	padding-top: 15px;
+	color: rgba(0, 0, 0, 0.733);
+	font-size: 80px;
+	font-weight: 900;
+	text-align: center;
+	text-shadow: 3px 3px rgba(50, 50, 50, 0.5);
+}
+
+.temp p {
+	font-size: 1rem;
+	text-shadow: none;
+	color: rgb(97, 96, 96);
+	font-size: 1.2rem;
+	font-weight: 500;
+	font-style: italic;
+	text-align: center;
+}
+
+.weather-box .weather {
+	font-size: 1.5rem;
+	font-weight: 700;
+	color: rgba(0, 0, 0, 0.815);
+	margin-bottom: 2rem;
+	text-transform: capitalize;
+}
+
+.city-icon {
+	margin-top: 10px;
+	width: 100px;
+	height: 100px;
+}
+
+@media screen and (max-width: 900px) {
+	.App {
+		margin: 0 auto;
+	}
+	.search-bar,
+	.wrapper {
+		width: 90% !important;
+	}
+}
